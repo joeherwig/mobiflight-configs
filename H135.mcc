@@ -5,11 +5,10 @@
       <active>true</active>
       <description>A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO, Bool) ! (L:A32NX_OVHD_INTLT_ANN) 0 == or (L:A32NX_ELEC_DC_BAT_BUS_IS_POWERED, Bool) and 1 and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="c23bb5cd-c1d6-4709-9071-4ee07cf80abe" />
+        <source type="SimConnect" VarType="CODE" Value="(A:ELECTRICAL MASTER BATTERY:1,bool)" UUID="b9a60acf-7cf1-4cdc-9694-25016d74c83a" />
         <test type="Float" value="1" />
         <modifiers>
-          <transformation active="False" expression="$" />
-          <comparison active="False" value="0" operand="&gt;" ifValue="0" elseValue="1" />
+          <comparison active="True" value="0" operand="&gt;" ifValue="0" elseValue="1" />
         </modifiers>
         <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="2" pinBrightness="255" />
         <preconditions />
@@ -95,7 +94,7 @@
       <active>true</active>
       <description>A32NX_OVHD_FUEL_L_TK_PUMP_1_OFF</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:FUELSYSTEM PUMP SWITCH:2, Enum) 0 == (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="4f215d3d-87e8-4204-905d-44e044f2e57a" />
+        <source type="SimConnect" VarType="CODE" Value="(L:ENG1_PRIME)" UUID="4f215d3d-87e8-4204-905d-44e044f2e57a" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -125,7 +124,7 @@
       <active>true</active>
       <description>A32NX_OVHD_FUEL_L_TK_PUMP_2_OFF</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:FUELSYSTEM PUMP SWITCH:5, Enum) 0 == (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="f5a94739-a0a4-44ce-98e9-3479d77060dc" />
+        <source type="SimConnect" VarType="CODE" Value="(&gt;L:ENG2_PRIME)" UUID="f5a94739-a0a4-44ce-98e9-3479d77060dc" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -155,7 +154,7 @@
       <active>true</active>
       <description>A32NX_OVHD_FUEL_C_TK_PUMP_1_OFF</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:FUELSYSTEM VALVE SWITCH:9, Enum) 0 == (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="-" />
+        <source type="SimConnect" VarType="CODE" Value="(L:H135_SDK_OH_FUEL_TRANSFER_FWD)" UUID="e1022229-a183-43a3-b211-565c17dd8581" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -405,32 +404,8 @@
     </config>
   </outputs>
   <inputs>
-    <config guid="dfb3adbe-c32f-4d4e-8a88-71253f51f3c1">
-      <active>false</active>
-      <description>HOTAS X aileron axis</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Joystick - HOTAS Warthog / JS-41cdd480-317f-11ee-800e-444553540000" name="Axis X" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <analog>
-          <onChange type="MSFS2020CustomInputAction" command="@ 32.0293 * 16383 - -16383 max 16383 min (&gt;K:AXIS_AILERONS_SET)" presetId="e56b6453-3078-4f4f-b832-c240bc0456fc" />
-        </analog>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="7b638d91-bfca-4c29-b435-b74e7fb7985d">
-      <active>false</active>
-      <description>HOTAS Y elevator axis</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Joystick - HOTAS Warthog / JS-41cdd480-317f-11ee-800e-444553540000" name="Axis Y" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <analog>
-          <onChange type="MSFS2020CustomInputAction" command="@ 32.0293 * 16383 - -16383 max 16383 min (&gt;K:AXIS_ELEVATOR_SET)" presetId="b97129fa-9955-4da9-a40b-d7cd03dad49b" />
-        </analog>
-        <preconditions />
-        <configrefs>
-          <configref active="False" ref="d128d7da-5f2f-49ab-95a7-00f84078fba0" placeholder="#" />
-        </configrefs>
-      </settings>
-    </config>
     <config guid="42f13466-fe22-460f-be0c-7b2f041aafb1">
-      <active>false</active>
+      <active>true</active>
       <description>Display brightness</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Axis RotationX" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <analog>
@@ -444,21 +419,10 @@
     </config>
     <config guid="024f9fe8-e420-43ce-b3f5-2c2973717228">
       <active>true</active>
-      <description>Bat 1</description>
+      <description>H135 Master and Standby Battery Toggle</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 26" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="(L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO) ! (&gt;L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO)" presetId="da9df773-d9c8-40a2-a3a3-59d97045f390" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="3756752b-fd67-48f0-b0c9-3168dd7e2b62">
-      <active>true</active>
-      <description>Bat 2</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 27" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="(L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO) ! (&gt;L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO)" presetId="ab6a136d-66f2-48d1-b94b-90e1bcc55745" />
+          <onPress type="MSFS2020CustomInputAction" command="0 (&gt;K:TOGGLE_MASTER_BATTERY) " presetId="0ce48790-1021-4a96-b74f-541344811962" />
         </button>
         <preconditions />
         <configrefs />
@@ -475,156 +439,60 @@
         <configrefs />
       </settings>
     </config>
-    <config guid="cc1cfe75-8992-483b-b5ea-492c5cb5f653">
-      <active>false</active>
-      <description>L TK Pump 1</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 22" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="2 (&gt;K:FUELSYSTEM_PUMP_TOGGLE)" presetId="fa49d278-6b41-484f-9509-668763fffc38" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="eeacff36-1dd8-4d7e-b0dd-bea13d71b6f9">
-      <active>false</active>
-      <description>L TK Pump 2</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 25" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="5 (&gt;K:FUELSYSTEM_PUMP_TOGGLE)" presetId="8ec7f27e-c556-429a-be78-033bf83822ae" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
     <config guid="11604307-de10-4a28-95bb-d2e962d9823b">
-      <active>false</active>
-      <description>C TK Pump 1</description>
+      <active>true</active>
+      <description>H135 Fuel Pump 1</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 31" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="9 (&gt;K:FUELSYSTEM_VALVE_TOGGLE)" presetId="724e739f-8cc7-446d-872f-e27566af6a70" />
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;K:FUELSYSTEM_PUMP_ON)" presetId="e67f7661-4975-4786-a28f-6ef6452081a2" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="1 (&gt;K:FUELSYSTEM_PUMP_OFF)" presetId="af5e1d98-2522-43ff-9dab-7fc74a3b4960" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="f00ac512-0d43-4ee1-bb8d-021294cb0545">
+      <active>true</active>
+      <description>H135 Fuel Prime 1</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 22" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:ENG1_PRIME)" presetId="2875246d-2ad3-44ee-9062-f5d1593d7b7f" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="0 (&gt;L:ENG1_PRIME)" presetId="b59c4d01-f7cb-482d-8b8b-8dd978dafddc" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="e82cf8c8-fc0b-4369-a623-175e2f0e46f2">
+      <active>true</active>
+      <description>H135 Fuel Prime 2</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 25" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:ENG2_PRIME)" presetId="6f486317-7313-428c-b376-a081b7fe3c10" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="0 (&gt;L:ENG2_PRIME)" presetId="9228f0e5-8474-480f-997a-44757fe50fcc" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="cdacdf2d-d300-45fb-9169-9d4e954f5594">
+      <active>true</active>
+      <description>H135 Fuel Pump 2</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="4 (&gt;K:FUELSYSTEM_PUMP_ON)" presetId="e67f7661-4975-4786-a28f-6ef6452081a2" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="4 (&gt;K:FUELSYSTEM_PUMP_OFF)" presetId="af5e1d98-2522-43ff-9dab-7fc74a3b4960" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="99232f69-d753-4b43-9791-5b6778527650">
-      <active>false</active>
+      <active>true</active>
       <description>C TK Pump 2</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="10 (&gt;K:FUELSYSTEM_VALVE_TOGGLE)" presetId="08b08855-b68f-411f-b500-55109c987ed3" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="72541ab6-5659-407c-9821-b611b67dcb76">
-      <active>false</active>
-      <description>R TK Pump 1</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 32" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="3 (&gt;K:FUELSYSTEM_PUMP_TOGGLE)" presetId="1b3978c8-90ca-43a6-ba6d-a0da241fc8a9" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="a61d21df-ef07-42b4-8116-1aa9c2e99353">
-      <active>false</active>
-      <description>R TK Pump 2</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 2" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="6 (&gt;K:FUELSYSTEM_PUMP_TOGGLE)" presetId="fc078489-64bc-4c19-b0a9-b7b9e837aeda" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="da73a163-c057-44d5-8884-52177ecfa26b">
-      <active>false</active>
-      <description>ADIRS 1</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Axis Y" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <analog>
-          <onChange type="MSFS2020CustomInputAction" command="@ 30000 &lt;= if{ 0 (&gt;L:A32NX_OVHD_ADIRS_IR_1_MODE_SELECTOR_KNOB) } &#xA;30000 40000 @ rng if{ 1 (&gt;L:A32NX_OVHD_ADIRS_IR_1_MODE_SELECTOR_KNOB) } &#xA;@ 40000 &gt;= if{ 2 (&gt;L:A32NX_OVHD_ADIRS_IR_1_MODE_SELECTOR_KNOB) } &#xA;" presetId="b26c3972-dee2-431b-9b32-9a9f9cefa097" />
-        </analog>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="4a823e40-6577-4b2a-900f-dc4ccd6d817d">
-      <active>false</active>
-      <description>ADIRS 2</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Axis X" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <analog>
-          <onChange type="MSFS2020CustomInputAction" command="@ 30000 &lt;= if{ 0 (&gt;L:A32NX_OVHD_ADIRS_IR_2_MODE_SELECTOR_KNOB) } &#xA;30000 40000 @ rng if{ 1 (&gt;L:A32NX_OVHD_ADIRS_IR_2_MODE_SELECTOR_KNOB) } &#xA;@ 40000 &gt;= if{ 2 (&gt;L:A32NX_OVHD_ADIRS_IR_2_MODE_SELECTOR_KNOB) } &#xA;" presetId="0" />
-        </analog>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="9bc54ef6-de02-49d5-93be-820b50f54e55">
-      <active>false</active>
-      <description>ADIRS 3</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Axis RotationY" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <analog>
-          <onChange type="MSFS2020CustomInputAction" command="@ 30000 &lt;= if{ 0 (&gt;L:A32NX_OVHD_ADIRS_IR_3_MODE_SELECTOR_KNOB) } &#xA;30000 40000 @ rng if{ 1 (&gt;L:A32NX_OVHD_ADIRS_IR_3_MODE_SELECTOR_KNOB) } &#xA;@ 40000 &gt;= if{ 2 (&gt;L:A32NX_OVHD_ADIRS_IR_3_MODE_SELECTOR_KNOB) } &#xA;" presetId="-" />
-        </analog>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="bc5803e7-3396-4dab-85c5-6a897a80740b">
-      <active>false</active>
-      <description>APU Master toggle</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 9" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="(L:A32NX_OVHD_APU_MASTER_SW_PB_IS_ON, Bool) ! (&gt;L:A32NX_OVHD_APU_MASTER_SW_PB_IS_ON) " presetId="6e2c0773-9e0f-416b-8e0c-fb37e2b2f793" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="95e2dfcc-b53e-4c7d-a273-86f5833bfaa7">
-      <active>false</active>
-      <description>APU Start</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 10" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="(L:A32NX_OVHD_APU_MASTER_SW_PB_IS_ON, Bool) if{ 1 (&gt;L:A32NX_OVHD_APU_START_PB_IS_ON) }" presetId="8ed639e8-e1cd-4832-be14-8402211dfca5" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="20340e4e-7c61-4736-8798-45de6e9f4391">
-      <active>true</active>
-      <description>APU Bleed</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 28" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="(L:A32NX_OVHD_PNEU_APU_BLEED_PB_IS_ON, Bool) ! (&gt;L:A32NX_OVHD_PNEU_APU_BLEED_PB_IS_ON, Bool)" presetId="027dd59b-a157-49ca-9b75-bf8285c5c830" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="97fdd1fe-381c-40fc-8ee8-62d500c740a9">
-      <active>true</active>
-      <description>Crew Oxy</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 3" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="(L:PUSH_OVHD_OXYGEN_CREW, Bool) ! (&gt;L:PUSH_OVHD_OXYGEN_CREW)" presetId="-" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="78668bca-98ca-4ec8-8753-cae2832511b9">
-      <active>true</active>
-      <description>Seatbelt signs</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 13" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="(A:CABIN SEATBELTS ALERT SWITCH, bool) ! if{ (&gt;K:CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE) }" presetId="f6941e58-ffa8-4e04-aabc-9f8515e94c0f" />
-          <onRelease type="MSFS2020CustomInputAction" command="(A:CABIN SEATBELTS ALERT SWITCH, bool) if{ (&gt;K:CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE) }" presetId="4f2687b6-3b70-49b3-9dbc-4f3f3b9b86ec" />
         </button>
         <preconditions />
         <configrefs />
@@ -642,41 +510,8 @@
         <configrefs />
       </settings>
     </config>
-    <config guid="0c4b826a-a0f3-4e15-983f-20ad44b05bb1">
-      <active>false</active>
-      <description>Rudder axis</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="MFG Crosswind V2 / JS-41cdad70-317f-11ee-800c-444553540000" name="Axis RotationZ" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <analog>
-          <onChange type="MSFS2020CustomInputAction" command="@ 65535 / 32350 * 16535 - -32350 max 32350 min (&gt;K:RUDDER_SET)" presetId="e9986755-9580-4ae6-b89a-1f68dbbf6d0d" />
-        </analog>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="e61941c0-3da5-401a-8b2a-8b468a92b65e">
-      <active>false</active>
-      <description>Brake left axis</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="MFG Crosswind V2 / JS-41cdad70-317f-11ee-800c-444553540000" name="Axis X" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <analog>
-          <onChange type="MSFS2020CustomInputAction" command="@ 32.0293 * 16383 - -16383 max 16383 min (&gt;K:AXIS_LEFT_BRAKE_SET)" presetId="66571df6-3d12-413b-8106-b3ae494c7fbf" />
-        </analog>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="18ebda21-3359-49dd-b419-8fd0dc84c847">
-      <active>false</active>
-      <description>Brake right axis</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="MFG Crosswind V2 / JS-41cdad70-317f-11ee-800c-444553540000" name="Axis Y" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <analog>
-          <onChange type="MSFS2020CustomInputAction" command="@ 32.0293 * 16383 - -16383 max 16383 min (&gt;K:AXIS_RIGHT_BRAKE_SET)" presetId="0cf5f206-aa54-44dc-9722-51937259f87f" />
-        </analog>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
     <config guid="0f1f0a85-e473-41cf-b150-ed6255811c58">
-      <active>true</active>
+      <active>false</active>
       <description>Engine Mode selector</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="BU0836 Interface / JS-41cdad70-317f-11ee-800d-444553540000" name="Axis Slider2" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <analog>
@@ -686,77 +521,69 @@
         <configrefs />
       </settings>
     </config>
-    <config guid="49f5cab4-cfa1-4c9d-9586-9ca2176bc1f4">
+    <config guid="1cda0354-116e-47c8-9314-8ba6531f2657">
       <active>true</active>
-      <description>OVHD Lights LDG L ON/OFF</description>
+      <description>H135 rear door / A20N NoSmoking </description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:TOGGLE_DOOR_BACK, bool)" presetId="c52a2aa2-a73a-4096-b67f-1b92f1e6cdd8" />
+          <onRelease type="MSFS2020CustomInputAction" command="0 (&gt;L:TOGGLE_DOOR_BACK, bool)" presetId="0" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="f0ddb8f0-17dc-40f0-803e-06c34b792441">
+      <active>true</active>
+      <description>H135 Eng Master 1 FLIGHT/IDLE</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 7" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="0 (&gt;L:LIGHTING_LANDING_2)&#xA;0 (&gt;L:LANDING_2_Retracted) 1 2 r (&gt;K:2:LANDING_LIGHTS_SET)" presetId="852a4fa8-02a5-451c-abb6-1a001f154b7d" />
-          <onRelease type="MSFS2020CustomInputAction" command="1 (&gt;L:LIGHTING_LANDING_2)&#xA;0 (&gt;L:LANDING_2_Retracted) 0 2 r (&gt;K:2:LANDING_LIGHTS_SET)" presetId="3fd1c0e8-0261-4cbc-b4d0-341d0e4e8aa2" />
+          <onPress type="MSFS2020CustomInputAction" command="(L:Engine1_Up, bool) ! (&gt;L:Engine1_Up, bool)" presetId="f111946f-9477-4090-ae52-8b016fc0f117" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:Engine1_Down, bool) ! (&gt;L:Engine1_Down, bool) " presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
-    <config guid="df54a943-204a-4501-9ddb-e8b44fc424b1">
+    <config guid="e708d6bb-a182-4006-baea-2191d3473bf7">
       <active>true</active>
-      <description>OVHD Lights LDG R ON/OFF</description>
+      <description>H135 Eng Master 2 FLIGHT/IDLE</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 10" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="0 (&gt;L:LIGHTING_LANDING_3) &#xA;0 (&gt;L:LANDING_3_Retracted) 1 3 r (&gt;K:2:LANDING_LIGHTS_SET)" presetId="abfe3fe0-f18c-4352-abea-17fbfdcb141d" />
-          <onRelease type="MSFS2020CustomInputAction" command="1 (&gt;L:LIGHTING_LANDING_3) &#xA;0 (&gt;L:LANDING_3_Retracted) 0 3 r (&gt;K:2:LANDING_LIGHTS_SET)" presetId="ae2c7e4c-9778-41f2-8198-cd7529dae092" />
+          <onPress type="MSFS2020CustomInputAction" command="(L:Engine2_Up, bool) ! (&gt;L:Engine2_Up, bool)" presetId="f111946f-9477-4090-ae52-8b016fc0f117" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:Engine2_Down, bool) ! (&gt;L:Engine2_Down, bool)" presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
-    <config guid="dc3b9ded-fa11-4b72-bbd7-5c3b6eac72a5">
+    <config guid="c86e66b8-5300-408b-8ecb-67ce6ac1eefc">
       <active>true</active>
-      <description>OVHD Lights LDG L OFF/RETRACT</description>
+      <description>H135 Eng Master 1 IDLE/OFF</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 8" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="2 (&gt;L:LIGHTING_LANDING_2)&#xA;1 (&gt;L:LANDING_2_Retracted) 0 2 r (&gt;K:2:LANDING_LIGHTS_SET)" presetId="cf942ad7-9231-4024-b653-78716c61384b" />
-          <onRelease type="MSFS2020CustomInputAction" command="1 (&gt;L:LIGHTING_LANDING_2)&#xA;0 (&gt;L:LANDING_2_Retracted) 0 2 r (&gt;K:2:LANDING_LIGHTS_SET)" presetId="3fd1c0e8-0261-4cbc-b4d0-341d0e4e8aa2" />
+          <onPress type="MSFS2020CustomInputAction" command="(L:Engine1_Down, bool) ! (&gt;L:Engine1_Down, bool) 0 (&gt;L:Engine1_Up, bool)" presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:Engine1_Up, bool) ! (&gt;L:Engine1_Up, bool) 0 (&gt;L:Engine1_Down, bool)" presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
-    <config guid="f5d15300-531c-4e6c-9c5a-9258001ed662">
+    <config guid="143b64f6-52d8-48d7-887c-40604f92be1e">
       <active>true</active>
-      <description>OVHD Lights LDG R OFF/RETRACT</description>
+      <description>H135 Eng Master 2 IDLE/OFF</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 9" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="2 (&gt;L:LIGHTING_LANDING_3) &#xA;1 (&gt;L:LANDING_3_Retracted) 0 3 r (&gt;K:2:LANDING_LIGHTS_SET)" presetId="96181372-4acf-4c03-8c54-69c9ad85f05d" />
-          <onRelease type="MSFS2020CustomInputAction" command="1 (&gt;L:LIGHTING_LANDING_3) &#xA;0 (&gt;L:LANDING_3_Retracted) 0 3 r (&gt;K:2:LANDING_LIGHTS_SET)" presetId="ae2c7e4c-9778-41f2-8198-cd7529dae092" />
+          <onPress type="MSFS2020CustomInputAction" command="(L:Engine2_Down, bool) ! (&gt;L:Engine2_Down, bool) 0 (&gt;L:Engine2_Up, bool)" presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:Engine2_Up, bool) ! (&gt;L:Engine2_Up, bool) 0 (&gt;L:Engine2_Down, bool)" presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
-    <config guid="d34eba9b-4855-4487-a3ab-68f7e2fc718d">
+    <config guid="31b63dc2-18f0-4cf8-923c-af6847d5e4f1">
       <active>true</active>
-      <description>OVHD Lights Taxi TO/Taxi</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 11" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="0 (&gt;L:LIGHTING_LANDING_1) &#xA;1 1 r (&gt;K:2:LANDING_LIGHTS_SET) &#xA;0 1 r (&gt;K:2:TAXI_LIGHTS_SET)" presetId="b214b197-fb87-4222-a373-91bffd60158b" />
-          <onRelease type="MSFS2020CustomInputAction" command="1 (&gt;L:LIGHTING_LANDING_1) &#xA;0 1 r (&gt;K:2:LANDING_LIGHTS_SET) &#xA;1 1 r (&gt;K:2:TAXI_LIGHTS_SET)&#xA;" presetId="76696abc-dcce-4148-be15-663bb3493f21" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="b1f46549-b6ed-4bf4-a4f0-0472392bdd4d">
-      <active>true</active>
-      <description>OVHD Lights Taxi Taxi/Off</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 12" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="2 (&gt;L:LIGHTING_LANDING_1) &#xA;0 1 r (&gt;K:2:LANDING_LIGHTS_SET) &#xA;0 1 r (&gt;K:2:TAXI_LIGHTS_SET)" presetId="2f8c9856-b323-4174-b707-01f5b6e07bc3" />
-          <onRelease type="MSFS2020CustomInputAction" command="2 (&gt;L:LIGHTING_LANDING_1) &#xA;0 1 r (&gt;K:2:LANDING_LIGHTS_SET) &#xA;0 1 r (&gt;K:2:TAXI_LIGHTS_SET)" presetId="2f8c9856-b323-4174-b707-01f5b6e07bc3" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
+      <description>H135 Gen 1</description>
     </config>
   </inputs>
 </MobiflightConnector>
