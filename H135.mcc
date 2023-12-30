@@ -92,9 +92,9 @@
     </config>
     <config guid="427f0c6a-746d-4dca-96bf-3e644259184b">
       <active>true</active>
-      <description>A32NX_OVHD_FUEL_L_TK_PUMP_1_OFF</description>
+      <description>A32NX_OVHD_FUEL_L_TK_PUMP_1_OFF - H135 Primer 1</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(L:ENG1_PRIME)" UUID="4f215d3d-87e8-4204-905d-44e044f2e57a" />
+        <source type="SimConnect" VarType="CODE" Value="(L:ENG1_PRIME) !" UUID="4f215d3d-87e8-4204-905d-44e044f2e57a" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -124,7 +124,7 @@
       <active>true</active>
       <description>A32NX_OVHD_FUEL_L_TK_PUMP_2_OFF</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(&gt;L:ENG2_PRIME)" UUID="f5a94739-a0a4-44ce-98e9-3479d77060dc" />
+        <source type="SimConnect" VarType="CODE" Value="(&gt;L:ENG2_PRIME) !" UUID="f5a94739-a0a4-44ce-98e9-3479d77060dc" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -152,9 +152,9 @@
     </config>
     <config guid="d22d766a-1186-4925-a937-aefed805b40b">
       <active>true</active>
-      <description>A32NX_OVHD_FUEL_C_TK_PUMP_1_OFF</description>
+      <description>A32NX_OVHD_FUEL_C_TK_PUMP_1_OFF - H135 Fuel FWD</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(L:H135_SDK_OH_FUEL_TRANSFER_FWD)" UUID="e1022229-a183-43a3-b211-565c17dd8581" />
+        <source type="SimConnect" VarType="CODE" Value="(A:FUELSYSTEM PUMP SWITCH:1, bool) 0 == if{ 1 } els{ 0 }" UUID="e1022229-a183-43a3-b211-565c17dd8581" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -182,9 +182,9 @@
     </config>
     <config guid="5aa789b5-cf9e-4c29-89fa-59960f818466">
       <active>true</active>
-      <description>A32NX_OVHD_FUEL_C_TK_PUMP_2_OFF</description>
+      <description>A32NX_OVHD_FUEL_C_TK_PUMP_2_OFF - H135 Fuel AFT</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:FUELSYSTEM VALVE SWITCH:10, Enum) 0 == (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="45f550a0-121d-4468-a665-de30dfc3359f" />
+        <source type="SimConnect" VarType="CODE" Value="(A:FUELSYSTEM PUMP SWITCH:4, bool) 0 == if{ 10 } els{ 0 }" UUID="45f550a0-121d-4468-a665-de30dfc3359f" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -212,9 +212,9 @@
     </config>
     <config guid="7c94358a-dc46-4aed-9553-9a70f2b7901c">
       <active>true</active>
-      <description>A32NX_OVHD_FUEL_R_TK_PUMP_1_OFF</description>
+      <description>A32NX_OVHD_FUEL_R_TK_PUMP_1_OFF - H135 Gen 1 OFF</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:FUELSYSTEM PUMP SWITCH:3, Enum) 0 == (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="521d01a8-5924-46ae-b138-9ba18e211c8b" />
+        <source type="SimConnect" VarType="CODE" Value="(A:GENERAL ENG MASTER ALTERNATOR:1,bool) 0 == if{ 1 } els{ 0 }" UUID="30526229-aab8-46b2-9a4c-c755ae2290d4" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -242,9 +242,9 @@
     </config>
     <config guid="f2070311-990c-4a8d-bed6-bcc880423cb9">
       <active>true</active>
-      <description>A32NX_OVHD_FUEL_R_TK_PUMP_2_OFF</description>
+      <description>A32NX_OVHD_FUEL_R_TK_PUMP_2_OFF - H135 Gen 2 OFF</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:FUELSYSTEM PUMP SWITCH:6, Enum) 0 == (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="09233e60-afba-499d-950d-7f322633dd4a" />
+        <source type="SimConnect" VarType="CODE" Value="(A:GENERAL ENG MASTER ALTERNATOR:2,bool) 0 == if{ 1 } els{ 0 }" UUID="09233e60-afba-499d-950d-7f322633dd4a" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -584,6 +584,26 @@
     <config guid="31b63dc2-18f0-4cf8-923c-af6847d5e4f1">
       <active>true</active>
       <description>H135 Gen 1</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 32" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(A:GENERAL ENG MASTER ALTERNATOR:1,bool) 0 == if{ (&gt;K:TOGGLE_ALTERNATOR1) } " presetId="502512df-3902-4530-bc9d-3530b696e5f9" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="(A:GENERAL ENG MASTER ALTERNATOR:1,bool) 1 == if{ (&gt;K:TOGGLE_ALTERNATOR1) } " presetId="-" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="08475c2a-82e4-4fdf-a3ca-e4bb18f317de">
+      <active>true</active>
+      <description>H135 Gen 2</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 2" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(A:GENERAL ENG MASTER ALTERNATOR:2,bool) 0 == if{ (&gt;K:TOGGLE_ALTERNATOR2) } " presetId="502512df-3902-4530-bc9d-3530b696e5f9" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="(A:GENERAL ENG MASTER ALTERNATOR:2,bool) 1 == if{ (&gt;K:TOGGLE_ALTERNATOR2) } " presetId="0" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
     </config>
   </inputs>
 </MobiflightConnector>
