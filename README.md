@@ -39,9 +39,11 @@ Now all is prepared and the next steps must be done everytime you upgrade a conf
    :arrow_right: then my serial will disappear and the config is adjusted to your serial :arrow_right: click "OK" :arrow_right: "Save" (otherwise you have to do it every time)
 ![AssignBoardToConfig](img/NOTE%20-%20AssignBoardToConfig.gif)
 
-[!TIP] 
--  Optional but recommended, on Mobiflight bottom right mouse click on your selected aircraft :arrow_right: link current config & "Auto load linked config"
--  Optional but recommended; on Mobiflight top, activate "AutoRun" (yellow pulp if activated)
+> [!TIP]
+> Optional but recommended, on Mobiflight bottom right mouse click on your selected aircraft :arrow_right: link current config & "Auto load linked config"
+
+> [!TIP]
+> Optional but recommended; on Mobiflight top, activate "AutoRun" (yellow pulp if activated)
 Now you are ready to use and enjoy
 
 
