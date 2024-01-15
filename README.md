@@ -5,6 +5,8 @@ My configurations for mobiflight
 was created for the FlyByWire A32nx Airbus A320neo (A20N).
 
 ## GENERIC_AP-V6_ASOBO_PLANES
+Addresses standard Autopilot Variables and Events. For instance for the Asobo G1000, G3000 or just other Standard Autopilots. 
+
 ![Overview of generic AP config](img/GENERIC_AP-V6_ASOBO_PLANES%20OVERVIEW.jpg)
 was taken from [https://flightsim.to/file/67143/generic-ap-asobo-planes-minicockpit-minifcu-mobiflight-profile-full-installation](https://flightsim.to/file/67143/generic-ap-asobo-planes-minicockpit-minifcu-mobiflight-profile-full-installation).
 
