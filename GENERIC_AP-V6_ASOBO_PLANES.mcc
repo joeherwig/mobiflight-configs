@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MobiflightConnector>
+  <outputs>
+    <config guid="fca285bb-e179-4704-ab2f-f3b46ef6c94d">
+      <active>true</active>
+      <description>AP - SPD/MACH</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT MANAGED SPEED IN MACH,Bool)" UUID="1a2d4936-4073-410f-8081-bf186601a2a2" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="CustomDevice" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" customType="" customName="miniFCU LCD" messageType="2" value="$" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="343abbf4-077e-4a56-a4da-c44a1d4626dd">
+      <active>true</active>
+      <description>AP - VS</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT VERTICAL HOLD VAR,Feet/minute)" UUID="bc545a04-646d-41ce-a510-2c798f7dfe1d" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="CustomDevice" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" customType="" customName="miniFCU LCD" messageType="10" value="$" />
+        <preconditions>
+          <precondition type="config" active="true" ref="793e9a74-09d8-42a6-bcaf-a563a663f59f" operand="!=" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="793e9a74-09d8-42a6-bcaf-a563a663f59f">
+      <active>true</active>
+      <description>AP - VS (CONDITION &amp; DASHES)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT VERTICAL HOLD,Bool)" UUID="3c5c84e5-a499-4a07-8d0c-f812004f60fe" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <transformation active="True" expression="if($=1,0,1)" />
+        </modifiers>
+        <display type="CustomDevice" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" customType="" customName="miniFCU LCD" messageType="12" value="$" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="b8ba6898-df07-45de-8b90-e5bc3545cd8e">
+      <active>true</active>
+      <description>AP - MACH</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT MACH HOLD VAR, Number) 100 * near" UUID="f1ca5529-3fe4-4c8f-9d50-73985dff81c2" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="CustomDevice" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" customType="" customName="miniFCU LCD" messageType="1" value="$" />
+        <preconditions>
+          <precondition type="config" active="true" ref="fca285bb-e179-4704-ab2f-f3b46ef6c94d" operand="=" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="0d78f7ca-36c6-4ba8-89d4-55d4ed11892f">
+      <active>true</active>
+      <description>AP - ALTITUDE</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT ALTITUDE LOCK VAR:1,Feet)" UUID="7ac4737f-b97d-4bbb-af35-7067a5f1c1aa" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <transformation active="True" expression="$/100" />
+        </modifiers>
+        <display type="CustomDevice" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" customType="" customName="miniFCU LCD" messageType="8" value="$" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="1125e88e-23c6-4310-a0c7-f7312e8266ee">
+      <active>true</active>
+      <description>AP - A/THR</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT THROTTLE ARM,Bool)" UUID="09cc6242-895c-4ddd-9628-fcbe4a76f370" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" pin="ATHR" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="f05d5fd9-d33d-4216-ab8d-0aa671d6bfc7">
+      <active>true</active>
+      <description>AP - AP1</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT MASTER,Bool)" UUID="59411677-275b-4f69-82d2-eb93c20db76c" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" pin="AP1" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="65703001-2799-4c9b-9df3-350de5a5324a">
+      <active>true</active>
+      <description>AP</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="" UUID="-" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" pin="AP2" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="1057a76b-bb70-4b90-b6ef-752c6f178469">
+      <active>true</active>
+      <description>AP - FLC (ACTIVE)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT FLIGHT LEVEL CHANGE,bool)" UUID="276c8b8b-c886-4653-b531-b9eb4ca661d3" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" pin="EXPED" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="91e0842f-edd2-42b2-8d01-5a3a0b57acdb">
+      <active>true</active>
+      <description>AP - APPR (GLIDESLOPE)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT GLIDESLOPE HOLD,Bool)" UUID="be630859-9497-4f15-9cb8-464ce46dc0cf" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" pin="APPR" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="0009c189-168f-4f7e-b279-5eb3cdc03db9">
+      <active>true</active>
+      <description>AP - APPR (LOC)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT APPROACH HOLD, Bool)" UUID="7f4f9d36-1d79-48fc-9a84-f5006ed839d5" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" pin="LOC" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="6735c97c-4506-4f9e-ab53-48eb2a72f27a">
+      <active>true</active>
+      <description>AP - LAYER INDICATOR (HDG &lt;&gt; TRK)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="Variable" varType="number" varName="HDGTRK" varExpression="$" />
+        <test type="Float" value="0" />
+        <modifiers />
+        <display type="CustomDevice" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" customType="" customName="miniFCU LCD" messageType="13" value="$" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9488c8e0-98a6-496c-8aa3-74d313bdccc5">
+      <active>true</active>
+      <description>AP - HDG (LAYER HDG)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT HEADING LOCK DIR,Degrees) near" UUID="e47210e8-7db4-4980-9f57-b3682fb3742d" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <comparison active="True" value="0" operand="=" ifValue="360" elseValue="" />
+        </modifiers>
+        <display type="CustomDevice" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" customType="" customName="miniFCU LCD" messageType="5" value="$" />
+        <preconditions>
+          <precondition type="variable" active="true" ref="HDGTRK" operand="=" value="0" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="51c1deff-eb6e-4494-983f-47770b10a84a">
+      <active>true</active>
+      <description>AP - SPD (LAYER HDG)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT AIRSPEED HOLD VAR,Knots) near" UUID="c6348d07-b8b3-4e31-a28d-8615cf8e837e" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="CustomDevice" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" customType="" customName="miniFCU LCD" messageType="0" value="$" />
+        <preconditions>
+          <precondition type="config" active="true" ref="fca285bb-e179-4704-ab2f-f3b46ef6c94d" operand="!=" value="1" logic="and" />
+          <precondition type="variable" active="true" ref="HDGTRK" operand="=" value="0" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d3eee3d0-6c2b-4c0a-8b79-a1b42888865c">
+      <active>true</active>
+      <description>AP - CRS1 @ HDG (LAYER TRK)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:NAV OBS:1, Degrees)" UUID="0" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <comparison active="True" value="0" operand="=" ifValue="360" elseValue="" />
+        </modifiers>
+        <display type="CustomDevice" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" customType="" customName="miniFCU LCD" messageType="5" value="$" />
+        <preconditions>
+          <precondition type="variable" active="true" ref="HDGTRK" operand="=" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="3853e61b-5386-48e1-8c29-8234ff37cff2">
+      <active>true</active>
+      <description>AP - CRS2 @ SPD (LAYER TRK)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:NAV OBS:2, Degrees)" UUID="0" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <comparison active="True" value="0" operand="=" ifValue="360" elseValue="" />
+        </modifiers>
+        <display type="CustomDevice" serial="miniCOCKPIT miniFCU/ SN-94G-809" trigger="normal" customType="" customName="miniFCU LCD" messageType="0" value="$" />
+        <preconditions>
+          <precondition type="variable" active="true" ref="HDGTRK" operand="=" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+  </outputs>
+  <inputs>
+    <config guid="ac32e9fa-111d-4195-8675-b1851db752ef">
+      <active>true</active>
+      <description>AP - LAYER SWITCH (HDG-V/S &lt;&gt; TRK-FPA)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="TRK Button" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="VariableInputAction" varType="number" varName="HDGTRK" varExpression="if($=0,1,0)" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="6e90830f-42b1-4012-86d2-7b068f1b60b7">
+      <active>true</active>
+      <description>AP - SPD ENCODER (LAYER HDG-V/S)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="SPD Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:AP_SPD_VAR_DEC)" presetId="f7ab3fba-61e4-4762-838c-4f957218c2db" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:AP_SPD_VAR_INC)" presetId="f0379392-9a2d-450a-bd31-d363524a6c15" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="variable" active="true" ref="HDGTRK" operand="=" value="0" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="73407553-1e0f-4609-b4fa-f3690ba7cdbe">
+      <active>true</active>
+      <description>AP - HDG ENCODER (LAYER HDG-V/S)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="HDG Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:HEADING_BUG_DEC)" presetId="26e6436d-3eb5-4025-b8ad-57bcc1c55035" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:HEADING_BUG_INC)" presetId="a5629735-057a-4442-86f3-27c11e9dfcc8" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="variable" active="true" ref="HDGTRK" operand="=" value="0" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="f881208c-90c2-4176-9429-ca2b61190db3">
+      <active>true</active>
+      <description>AP - CRS1 @ HDG ENCODER (LAYER TRK-FPA)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="HDG Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(A:NAV OBS:1, degree) 1 - dnor (&gt;K:VOR1_SET)" presetId="-" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(A:NAV OBS:1, degree) 1 + dnor (&gt;K:VOR1_SET)" presetId="12dc0374-c401-4d4c-9799-542a03e59bae" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="variable" active="true" ref="HDGTRK" operand="=" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="3ceb0ad2-42eb-4338-aa69-5537a6e367ce">
+      <active>true</active>
+      <description>AP - CRS2 @ SPD ENCODER (LAYER TRK-FPA)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="SPD Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(A:NAV OBS:2, degree) 1 - dnor (&gt;K:VOR2_SET)" presetId="b3023c26-2c5d-41c5-9fbe-d70422ca94f9" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(A:NAV OBS:2, degree) 1 + dnor (&gt;K:VOR2_SET)" presetId="983bbf44-34cb-4ab5-8237-a8c9f6d76634" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="variable" active="true" ref="HDGTRK" operand="=" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="e580a137-a0eb-435d-8188-938f2ecbe61c">
+      <active>true</active>
+      <description>AP - ALTITUDE (SCALE 100 &lt;&gt; 1000)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="ALTINC" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="VariableInputAction" varType="number" varName="ALTINC" varExpression="1000" />
+          <onRelease type="VariableInputAction" varType="number" varName="ALTINC" varExpression="100" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="71632a2c-908c-462c-ab30-6ac27b0417e4">
+      <active>true</active>
+      <description>AP - ALTITUDE (100)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="ALT Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="100 (&gt;K:AP_ALT_VAR_DEC)" presetId="035b1f1d-1e4e-4809-9713-07fe5ab0581d" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="100 (&gt;K:AP_ALT_VAR_INC)" presetId="6b70bc27-97bf-499e-ba49-3d63984aa593" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="variable" active="true" ref="ALTINC" operand="!=" value="1000" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ba5e7e7c-dca2-4b08-b737-18f91f49a33c">
+      <active>true</active>
+      <description>AP - ALTITUDE (1000)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="ALT Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="1000 (&gt;K:AP_ALT_VAR_DEC)" presetId="035b1f1d-1e4e-4809-9713-07fe5ab0581d" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="1000 (&gt;K:AP_ALT_VAR_INC)" presetId="6b70bc27-97bf-499e-ba49-3d63984aa593" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="variable" active="true" ref="ALTINC" operand="=" value="1000" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="2b49801b-1a29-4a5e-bfb1-f16c89e2ddbf">
+      <active>true</active>
+      <description>AP - VS</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="VS Encoder" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:AP_VS_VAR_DEC)" presetId="aad21181-9c0f-497a-9801-641c8453fadd" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:AP_VS_VAR_INC)" presetId="7ee48d79-258c-419a-9780-f35024a7bd2b" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="5a9a23cc-538f-4fb1-8573-021bd6186529">
+      <active>true</active>
+      <description>AP - AP1</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="AP1 Button" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_MASTER)" presetId="20c2e2b5-c270-486a-ac31-dce157967d74" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="c6fcfd3e-088c-4b72-bf1e-7ef31c215aac">
+      <active>true</active>
+      <description>AP - VS/PANEL HOLD</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="VS PUSH" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_PANEL_VS_HOLD)" presetId="6a81e461-5a7b-4dbf-b0b2-7cacc179df42" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="583a2196-1294-4130-b395-10a6d4592ad1">
+      <active>true</active>
+      <description>AP - ALT HOLD</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="ALT PUSH" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_PANEL_ALTITUDE_HOLD)" presetId="9c7f4d04-0217-41a6-87a8-dee082bb2801" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9431658f-c168-4554-bafe-fbaa4d5fd65f">
+      <active>true</active>
+      <description>AP - HDG/ROLL</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="HDG PUSH" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_HDG_HOLD)" presetId="1e879ccb-96c9-401e-b447-940c7380a410" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d64564bb-8e86-493e-b082-8dfcc8ceaf91">
+      <active>true</active>
+      <description>AP - NAV1 (VOR)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="HDG PULL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_NAV1_HOLD)" presetId="83a61eaf-5315-445b-bc1e-bc76135cca76" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="8fed7c2d-3a3c-48fc-ba2a-ecac853767f6">
+      <active>true</active>
+      <description>AP - AIRSPEED HOLD</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="SPD PUSH" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_AIRSPEED_HOLD)" presetId="0c7952a8-d6f3-427f-9a19-8e5242f4c67a" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="0e3d6356-8f78-4c8e-bea6-0fff14dbcd4a">
+      <active>true</active>
+      <description>AP - A/THR</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="ATHR Button" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AUTO_THROTTLE_ARM)" presetId="d0714eea-61a2-4725-adb0-fdb811d8b4a5" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="53ea80c2-11ea-43ab-90c2-ed1bb7421030">
+      <active>true</active>
+      <description>AP - APPR</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="APPR Button" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_APR_HOLD)" presetId="de7fab05-76c5-4fc1-a86a-e32a31c5aff3" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="6d22b7e4-0a76-49f0-8d14-ca649abf23c6">
+      <active>true</active>
+      <description>AP - LOC</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="LOC Button" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_LOC_HOLD)" presetId="97176a5d-2081-4a9c-959c-058f825d1a8c" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="20b5ec21-350a-4606-ac67-2d539de5751b">
+      <active>true</active>
+      <description>AP - FLC</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.3, Culture=neutral, PublicKeyToken=null" serial="miniCOCKPIT miniFCU/ SN-94G-809" name="EXPED Button" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:FLIGHT_LEVEL_CHANGE)" presetId="b6e708aa-cb02-4662-b068-f4343da57f45" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </inputs>
+</MobiflightConnector>
