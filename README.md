@@ -68,7 +68,7 @@ Don´t miss the Fenix A320 Config
 https://de.flightsim.to/file/67139/fenix-a320-minicockpit-minifcu-mobiflight-profile-quartz-displays-full-installation
 
 
-###CHANGELOG V6 
+### CHANGELOG V6 
 *(Config is for MF 10.0.2.3 with miniFCU Firmware 0.9.3)*
 - changed all LED output logic to 0.9.3 Firmware
 
