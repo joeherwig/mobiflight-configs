@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleType>MobiFlight Mega</ModuleType>
+  <ModuleName>MF Mega Overhead</ModuleName>
+  <PowerSavingTime>600</PowerSavingTime>
+  <Output Name="2" Pin="2" />
+  <Output Name="3" Pin="3" />
+  <Output Name="4" Pin="4" />
+  <Output Name="5" Pin="5" />
+  <Output Name="6" Pin="6" />
+  <Output Name="7" Pin="7" />
+  <Output Name="8" Pin="8" />
+  <Output Name="9" Pin="9" />
+  <Output Name="10" Pin="10" />
+  <Output Name="11" Pin="11" />
+  <Output Name="12" Pin="12" />
+  <Output Name="13" Pin="13" />
+  <Output Name="14" Pin="14" />
+  <Output Name="15" Pin="15" />
+  <Output Name="16" Pin="16" />
+  <Output Name="17" Pin="17" />
+  <Output Name="18" Pin="18" />
+  <Output Name="19" Pin="19" />
+  <Output Name="20" Pin="20" />
+  <Output Name="21" Pin="21" />
+  <Output Name="22" Pin="22" />
+  <Output Name="23" Pin="23" />
+  <Output Name="24" Pin="24" />
+  <Output Name="25" Pin="25" />
+  <Output Name="26" Pin="26" />
+  <Output Name="27" Pin="27" />
+  <Output Name="28" Pin="28" />
+  <Output Name="29" Pin="29" />
+  <Output Name="30" Pin="30" />
+  <Output Name="31" Pin="31" />
+  <Output Name="32" Pin="32" />
+  <Output Name="33" Pin="33" />
+  <Output Name="34" Pin="34" />
+  <Output Name="35" Pin="35" />
+  <Output Name="36" Pin="36" />
+  <Output Name="37" Pin="37" />
+  <Output Name="38" Pin="38" />
+  <Output Name="39" Pin="39" />
+  <Output Name="40" Pin="40" />
+  <Output Name="41" Pin="41" />
+  <Output Name="42" Pin="42" />
+  <Output Name="43" Pin="43" />
+  <Output Name="44" Pin="44" />
+  <Output Name="45" Pin="45" />
+  <Output Name="46" Pin="46" />
+  <Output Name="47" Pin="47" />
+  <Output Name="48" Pin="48" />
+  <Output Name="49" Pin="49" />
+  <Output Name="50" Pin="50" />
+  <Output Name="51" Pin="51" />
+  <Output Name="52" Pin="52" />
+  <Output Name="53" Pin="53" />
+  <Output Name="54" Pin="54" />
+  <Output Name="55" Pin="55" />
+  <Output Name="56" Pin="56" />
+  <Output Name="57" Pin="57" />
+  <Output Name="58" Pin="58" />
+  <Output Name="59" Pin="59" />
+  <Output Name="60" Pin="60" />
+  <Output Name="61" Pin="61" />
+  <Output Name="62" Pin="62" />
+  <Output Name="63" Pin="63" />
+  <Output Name="64" Pin="64" />
+  <Output Name="65" Pin="65" />
+  <Output Name="66" Pin="66" />
+  <Output Name="67" Pin="67" />
+  <Output Name="68" Pin="68" />
+  <Output Name="69" Pin="69" />
+</Config>

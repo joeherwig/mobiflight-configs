@@ -10,7 +10,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="2" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="2" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -24,7 +24,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="3" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="3" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -38,7 +38,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="4" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="4" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -52,7 +52,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="5" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="5" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -66,7 +66,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="6" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="6" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -80,7 +80,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="7" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="7" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -94,7 +94,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="True" value="0" operand="&gt;" ifValue="0" elseValue="1" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="8" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="8" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -108,7 +108,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="9" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="9" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -122,7 +122,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="True" value="0" operand="&gt;" ifValue="0" elseValue="1" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="10" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="10" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -136,7 +136,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="11" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="11" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -150,7 +150,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="12" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="12" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -164,7 +164,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="13" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="13" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -178,7 +178,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="14" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="14" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -192,7 +192,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="15" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="15" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -206,7 +206,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="16" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="16" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -220,7 +220,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="17" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="17" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -234,7 +234,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="True" value="0" operand="&gt;" ifValue="0" elseValue="1" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="18" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="18" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -248,7 +248,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="True" value="0" operand="&gt;" ifValue="0" elseValue="1" />
         </modifiers>
-        <display type="Output" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="19" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="19" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>

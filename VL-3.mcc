@@ -10,7 +10,7 @@
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="-" serial="MobiFlight Mega/ SN-4fa-532" trigger="normal" pin="" pinBrightness="255" />
+        <display type="-" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
