@@ -4,13 +4,13 @@
     <config guid="d128d7da-5f2f-49ab-95a7-00f84078fba0">
       <active>true</active>
       <description>A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(A:ELECTRICAL MASTER BATTERY:1,bool)" UUID="b9a60acf-7cf1-4cdc-9694-25016d74c83a" />
         <test type="Float" value="1" />
         <modifiers>
           <comparison active="True" value="0" operand="&gt;" ifValue="0" elseValue="1" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="2" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="2" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -18,14 +18,14 @@
     <config guid="6306c261-7815-464a-b13f-9dca2f12eaf9">
       <active>true</active>
       <description>A32NX_OVHD_ELEC_BAT_1_PB_HAS_FAULT</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_ELEC_BAT_1_PB_HAS_FAULT, Bool) (L:A32NX_OVHD_INTLT_ANN) 0 == or (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) (L:A32NX_ELEC_AC_STAT_INV_BUS_IS_POWERED, Bool) or and 1 and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * 0 &gt; (A:CIRCUIT GENERAL PANEL ON, Bool) and" UUID="7c09cb56-a0f1-4621-871c-65e708c2e2c1" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="3" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="3" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -33,14 +33,14 @@
     <config guid="d83538ca-be14-4559-994f-dda0cdfa2266">
       <active>true</active>
       <description>A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO, Bool) ! (L:A32NX_OVHD_INTLT_ANN) 0 == or (L:A32NX_ELEC_DC_BAT_BUS_IS_POWERED, Bool) and 1 and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="c54959f5-a16b-411c-aa42-befa35b0f69a" />
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AVIONICS MASTER SWITCH:1,bool) 0 == if{ 10 } els{ 0 }" UUID="0" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="4" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="4" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -48,14 +48,14 @@
     <config guid="afe14ddf-287c-4f7d-9d3f-4c8fa829db13">
       <active>true</active>
       <description>A32NX_OVHD_ELEC_BAT_2_PB_HAS_FAULT</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_ELEC_BAT_2_PB_HAS_FAULT, Bool) (L:A32NX_OVHD_INTLT_ANN) 0 == or (L:A32NX_ELEC_DC_BAT_BUS_IS_POWERED, Bool) (L:A32NX_ELEC_AC_STAT_INV_BUS_IS_POWERED, Bool) or and 1 and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="4565760c-d774-43f8-8157-5c3837ade495" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="5" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="5" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -63,29 +63,29 @@
     <config guid="33144663-464b-4bb7-959d-30c8b4446666">
       <active>true</active>
       <description>A32NX_OVHD_ELEC_EXT_PWR_ON</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(A:EXTERNAL POWER AVAILABLE:1, Bool) (A:EXTERNAL POWER ON:1, Bool) and (L:A32NX_OVHD_INTLT_ANN) 0 == or (L:A32NX_ELEC_DC_BAT_BUS_IS_POWERED, Bool) and 1 and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="f85ffab7-0a49-427e-8227-a3a3cdad9a89" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="6" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="6" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="c5a5f00b-89a5-4b78-8ff0-8bba6965a7bf">
-      <active>true</active>
+      <active>false</active>
       <description>A32NX_OVHD_ELEC_EXT_PWR_AVAIL</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(A:EXTERNAL POWER AVAILABLE:1, Bool) (A:EXTERNAL POWER ON:1, Bool) ! and (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and 1 and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="1cb53187-0a3a-4fcc-81a4-7b933a62aab2" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="7" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="7" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -93,14 +93,14 @@
     <config guid="427f0c6a-746d-4dca-96bf-3e644259184b">
       <active>true</active>
       <description>A32NX_OVHD_FUEL_L_TK_PUMP_1_OFF - H135 Primer 1</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:ENG1_PRIME) !" UUID="4f215d3d-87e8-4204-905d-44e044f2e57a" />
-        <test type="Float" value="1" />
+        <test type="Float" value="0" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="8" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="8" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -108,29 +108,29 @@
     <config guid="f571d9af-afff-4d0f-aae9-7e9dca3b926f">
       <active>true</active>
       <description>A32NX_OVHD_FUEL_L_TK_PUMP_1_FAULT</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_INTLT_ANN) 0 == 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="a7ec8def-8398-4104-a61d-08a5bf4ebf2d" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="9" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="9" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="1d1fd9f7-43d3-463e-a8c5-ef9086ee14b9">
       <active>true</active>
-      <description>A32NX_OVHD_FUEL_L_TK_PUMP_2_OFF</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(&gt;L:ENG2_PRIME) !" UUID="f5a94739-a0a4-44ce-98e9-3479d77060dc" />
-        <test type="Float" value="1" />
+      <description>A32NX_OVHD_FUEL_L_TK_PUMP_2_OFF - H135 Primer 2</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:ENG2_PRIME) !" UUID="f5a94739-a0a4-44ce-98e9-3479d77060dc" />
+        <test type="Float" value="0" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="10" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="10" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -138,14 +138,14 @@
     <config guid="8c0acb15-a303-48dc-bfab-16f636861d08">
       <active>true</active>
       <description>A32NX_OVHD_FUEL_L_TK_PUMP_1_FAULT</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_INTLT_ANN) 0 == 1 and (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * 0 &gt; (A:CIRCUIT GENERAL PANEL ON, Bool) and" UUID="c38dc427-be45-42b8-85b7-0a26f337b709" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="11" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="11" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -153,14 +153,14 @@
     <config guid="d22d766a-1186-4925-a937-aefed805b40b">
       <active>true</active>
       <description>A32NX_OVHD_FUEL_C_TK_PUMP_1_OFF - H135 Fuel FWD</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(A:FUELSYSTEM PUMP SWITCH:1, bool) 0 == if{ 1 } els{ 0 }" UUID="e1022229-a183-43a3-b211-565c17dd8581" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="12" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="12" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -168,14 +168,14 @@
     <config guid="e133964b-d1e8-4936-be90-a2d48880964a">
       <active>true</active>
       <description>A32NX_OVHD_FUEL_C_TK_PUMP_1_FAULT</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="LVAR" Value="" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="13" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="13" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -183,14 +183,14 @@
     <config guid="5aa789b5-cf9e-4c29-89fa-59960f818466">
       <active>true</active>
       <description>A32NX_OVHD_FUEL_C_TK_PUMP_2_OFF - H135 Fuel AFT</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(A:FUELSYSTEM PUMP SWITCH:4, bool) 0 == if{ 10 } els{ 0 }" UUID="45f550a0-121d-4468-a665-de30dfc3359f" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="14" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="14" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -198,29 +198,29 @@
     <config guid="12cb893b-a54f-4e4e-801b-54f89fc6ed14">
       <active>true</active>
       <description>A32NX_OVHD_FUEL_C_TK_PUMP_2_FAULT</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(A:EXIT OPEN:1,Percent Over 100)" UUID="b91347c6-9af6-4696-a135-c61d601778f9" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="15" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="15" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="7c94358a-dc46-4aed-9553-9a70f2b7901c">
       <active>true</active>
-      <description>A32NX_OVHD_FUEL_R_TK_PUMP_1_OFF - H135 Gen 1 OFF</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:GENERAL ENG MASTER ALTERNATOR:1,bool) 0 == if{ 1 } els{ 0 }" UUID="30526229-aab8-46b2-9a4c-c755ae2290d4" />
+      <description>A32NX_OVHD_FUEL_R_TK_PUMP_1_OFF</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="LVAR" Value="" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="16" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="16" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -228,29 +228,29 @@
     <config guid="3c8eb3e6-bb90-44d1-be5b-a34f9549a979">
       <active>true</active>
       <description>A32NX_OVHD_FUEL_R_TK_PUMP_1_FAULT</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_INTLT_ANN) 0 == 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="2618ffbb-4a4f-431d-91da-a24eca15441f" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="17" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="17" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="f2070311-990c-4a8d-bed6-bcc880423cb9">
       <active>true</active>
-      <description>A32NX_OVHD_FUEL_R_TK_PUMP_2_OFF - H135 Gen 2 OFF</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:GENERAL ENG MASTER ALTERNATOR:2,bool) 0 == if{ 1 } els{ 0 }" UUID="09233e60-afba-499d-950d-7f322633dd4a" />
+      <description>A32NX_OVHD_FUEL_R_TK_PUMP_2_OFF</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="LVAR" Value="" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="18" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="18" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -258,14 +258,14 @@
     <config guid="c62008c6-4376-4f9b-a35a-7e72cf88795d">
       <active>true</active>
       <description>A32NX_OVHD_FUEL_R_TK_PUMP_2_FAULT</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_INTLT_ANN) 0 == 1 and (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="c67afcc3-b801-4504-9011-e26a69a30317" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="19" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="19" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -273,14 +273,14 @@
     <config guid="00ef5ecc-afe0-4e7c-975a-5c41fa0222c9">
       <active>true</active>
       <description>A32NX_OVHD_APU_MASTER_ON</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_APU_MASTER_SW_PB_IS_ON, Bool) (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) (L:A32NX_ELEC_AC_STAT_INV_BUS_IS_POWERED, Bool) or and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="1844b80b-faa6-4464-8908-1244d2cb9d7b" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="20" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="20" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -288,14 +288,14 @@
     <config guid="9872fb3f-4ee8-4e9b-80a4-ac4c5906ce04">
       <active>true</active>
       <description>A32NX_OVHD_APU_MASTER_FAULT - H135 Rear Door Open</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:TOGGLE_DOOR_BACK) !" UUID="3704dec9-e29f-4e58-a540-bb2bdc5fd7f5" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="21" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="21" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -303,14 +303,14 @@
     <config guid="32982fc8-4462-4fa9-80ef-7cb70176ef43">
       <active>true</active>
       <description>A32NX_OVHD_APU_START_ON</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_APU_START_PB_IS_ON, Bool) (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) (L:A32NX_ELEC_AC_STAT_INV_BUS_IS_POWERED, Bool) or and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="01beacc5-017b-42d2-82fd-bc20a3d5838b" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="22" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="22" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -318,14 +318,14 @@
     <config guid="053d0789-102a-4a77-a102-3fdbfb84cd7b">
       <active>true</active>
       <description>A32NX_OVHD_APU_START_AVAIL</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_APU_START_PB_IS_AVAILABLE, Bool) (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) (L:A32NX_ELEC_AC_STAT_INV_BUS_IS_POWERED, Bool) or and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="2beeccb3-6515-4c93-9928-7332a5f1170e" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="23" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="23" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -333,14 +333,14 @@
     <config guid="a55376d8-b774-4288-9764-420c1bc61220">
       <active>true</active>
       <description>A32NX_OVHD_APU_BLEED_ON</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_OVHD_PNEU_APU_BLEED_PB_IS_ON, Bool) (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="14548f87-407f-4e41-81bd-ccc169d7c284" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="24" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="24" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -348,14 +348,14 @@
     <config guid="cc6b2a8b-15de-4f6a-ba50-e25953bea78e">
       <active>true</active>
       <description>A32NX_OVHD_APU_BLEED_FAULT - H135 Door Open</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:TOGGLE_DOOR_MIDDLE_LEFT) ! (L:TOGGLE_DOOR_MIDDLE_RIGHT) ! OR if{ 1 } els{ 0 }" UUID="f8b15932-9b0e-45b8-b033-dc0597b1508c" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="25" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="25" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -363,14 +363,14 @@
     <config guid="814723ef-2f24-4c8b-a63d-b449d071ca27">
       <active>true</active>
       <description>A32NX_OVHD_???</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:PUSH_OVHD_OXYGEN_CREW, Bool) (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="25e896b9-4583-4935-89d8-6d81dd8c99a5" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="26" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="26" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -378,14 +378,14 @@
     <config guid="c2df5e32-e9eb-45ad-a3e4-91bc843a3133">
       <active>true</active>
       <description>A32NX_OVHD_OXY_CREW_OFF</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:PUSH_OVHD_OXYGEN_CREW, Bool) (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *" UUID="25e896b9-4583-4935-89d8-6d81dd8c99a5" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="MF Mega Overhead/ SN-4fa-532" trigger="normal" pin="27" pinBrightness="255" />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="27" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -393,11 +393,59 @@
     <config guid="0afeab2f-e0e4-46c5-878f-7de81d3c4d64">
       <active>true</active>
       <description>Arcaze LED</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="LVAR" Value="" />
         <test type="Float" value="1" />
         <modifiers />
         <display type="" serial="" pin="" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="48e91604-44e6-4e55-a439-7114cd1d0111">
+      <active>true</active>
+      <description>A32NX_OVHD_GEN1_FAULT</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="LVAR" Value="" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="32" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9a2b4f35-b2cc-4e79-b41f-d6feb6c4d77b">
+      <active>true</active>
+      <description>A32NX_OVHD_GEN1_OFF- H135 Gen 1 OFF</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:GENERAL ENG MASTER ALTERNATOR:1,bool) 0 == if{ 1 } els{ 0 }" UUID="-" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="33" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="117956ff-543c-4643-81d3-f8d68de8815a">
+      <active>true</active>
+      <description>A32NX_OVHD_GEN2_FAULT</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="LVAR" Value="" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="34" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="b934d30b-4449-4954-bfbb-aab7f7414d6a">
+      <active>true</active>
+      <description>A32NX_OVHD_GEN2_OFF - H135 Gen 2 OFF</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:GENERAL ENG MASTER ALTERNATOR:2,bool) 0 == if{ 1 } els{ 0 }" UUID="-" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="MF Mega Overhead/ SN-4F6-017" trigger="normal" pin="35" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -407,7 +455,7 @@
     <config guid="42f13466-fe22-460f-be0c-7b2f041aafb1">
       <active>true</active>
       <description>Display brightness</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Axis RotationX" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Axis RotationX" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <analog>
           <onChange type="MSFS2020CustomInputAction" command="@ 655.35 / 100 min 84 (&gt;K:2:LIGHT_POTENTIOMETER_SET) @ 512 / 100 min 85 (&gt;K:2:LIGHT_POTENTIOMETER_SET) @ 512 / 100 min 86 (&gt;K:2:LIGHT_POTENTIOMETER_SET) @ 512 / 100 min 87 (&gt;K:2:LIGHT_POTENTIOMETER_SET) @ 512 / 100 min 88 (&gt;K:2:LIGHT_POTENTIOMETER_SET) @ 512 / 100 min 89  (&gt;K:2:LIGHT_POTENTIOMETER_SET) @ 512 / 100 min 92 (&gt;K:2:LIGHT_POTENTIOMETER_SET) @ 512 / 100 min 93 (&gt;K:2:LIGHT_POTENTIOMETER_SET)" presetId="129fb0b5-38d8-4e20-baf0-b24f21ce3307" />
         </analog>
@@ -420,7 +468,7 @@
     <config guid="024f9fe8-e420-43ce-b3f5-2c2973717228">
       <active>true</active>
       <description>H135 Master and Standby Battery Toggle</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 26" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 26" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="0 (&gt;K:TOGGLE_MASTER_BATTERY) " presetId="0ce48790-1021-4a96-b74f-541344811962" />
         </button>
@@ -431,7 +479,7 @@
     <config guid="210b8d3e-0a00-4dde-b010-a00ba1cfaa1f">
       <active>true</active>
       <description>Ext Pwr</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 29" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 29" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(A:EXTERNAL POWER AVAILABLE:1, Bool) (A:EXTERNAL POWER ON:1, Bool) ! and if{ 1 (&gt;K:TOGGLE_EXTERNAL_POWER) } els{ (A:EXTERNAL POWER ON:1, Bool) if{ 1 (&gt;K:TOGGLE_EXTERNAL_POWER) } }" presetId="ead13209-35ed-4a08-b65e-6673f7cd5d07" />
         </button>
@@ -442,7 +490,7 @@
     <config guid="11604307-de10-4a28-95bb-d2e962d9823b">
       <active>true</active>
       <description>H135 Fuel Pump 1</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 31" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 31" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="1 (&gt;K:FUELSYSTEM_PUMP_ON)" presetId="e67f7661-4975-4786-a28f-6ef6452081a2" />
           <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="1 (&gt;K:FUELSYSTEM_PUMP_OFF)" presetId="af5e1d98-2522-43ff-9dab-7fc74a3b4960" />
@@ -454,7 +502,7 @@
     <config guid="f00ac512-0d43-4ee1-bb8d-021294cb0545">
       <active>true</active>
       <description>H135 Fuel Prime 1</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 22" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 22" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:ENG1_PRIME)" presetId="2875246d-2ad3-44ee-9062-f5d1593d7b7f" />
           <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="0 (&gt;L:ENG1_PRIME)" presetId="b59c4d01-f7cb-482d-8b8b-8dd978dafddc" />
@@ -466,7 +514,7 @@
     <config guid="e82cf8c8-fc0b-4369-a623-175e2f0e46f2">
       <active>true</active>
       <description>H135 Fuel Prime 2</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 25" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 25" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:ENG2_PRIME)" presetId="6f486317-7313-428c-b376-a081b7fe3c10" />
           <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="0 (&gt;L:ENG2_PRIME)" presetId="9228f0e5-8474-480f-997a-44757fe50fcc" />
@@ -478,7 +526,7 @@
     <config guid="cdacdf2d-d300-45fb-9169-9d4e954f5594">
       <active>true</active>
       <description>H135 Fuel Pump 2</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="4 (&gt;K:FUELSYSTEM_PUMP_ON)" presetId="e67f7661-4975-4786-a28f-6ef6452081a2" />
           <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="4 (&gt;K:FUELSYSTEM_PUMP_OFF)" presetId="af5e1d98-2522-43ff-9dab-7fc74a3b4960" />
@@ -490,7 +538,7 @@
     <config guid="99232f69-d753-4b43-9791-5b6778527650">
       <active>true</active>
       <description>C TK Pump 2</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="10 (&gt;K:FUELSYSTEM_VALVE_TOGGLE)" presetId="08b08855-b68f-411f-b500-55109c987ed3" />
         </button>
@@ -501,7 +549,7 @@
     <config guid="da484b85-ba9c-41de-a910-3926fed27d41">
       <active>true</active>
       <description>Electronig devices sign</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="0 (&gt;L:XMLVAR_SWITCH_OVHD_INTLT_NOSMOKING_Position, number)" presetId="c0cb2e63-64c9-4afc-a16d-83745e0d09ab" />
           <onRelease type="MSFS2020CustomInputAction" command="1 (&gt;L:XMLVAR_SWITCH_OVHD_INTLT_NOSMOKING_Position, number)" presetId="853c9228-8aef-4b4d-9944-e6a421f46639" />
@@ -513,7 +561,7 @@
     <config guid="1cda0354-116e-47c8-9314-8ba6531f2657">
       <active>true</active>
       <description>A20N NoSmoking - H135 Door Rear</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(L:TOGGLE_DOOR_BACK) 0 == if{ 1 (&gt;L:TOGGLE_DOOR_BACK, bool) }" presetId="c52a2aa2-a73a-4096-b67f-1b92f1e6cdd8" />
           <onRelease type="MSFS2020CustomInputAction" command="(L:TOGGLE_DOOR_BACK) 1 == if{ 0 (&gt;L:TOGGLE_DOOR_BACK, bool) }" presetId="0" />
@@ -525,7 +573,7 @@
     <config guid="7ea07adc-3ea8-455d-a1e1-751d648285cf">
       <active>true</active>
       <description>A20N NoSmoking - H135 Door Rear Copy</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 13" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 13" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(L:TOGGLE_DOOR_FRONT_LEFT) 0 == if{ 1 (&gt;L:TOGGLE_DOOR_FRONT_LEFT) } &#xA;(L:TOGGLE_DOOR_FRONT_RIGHT) 0 == if{ 1 (&gt;L:TOGGLE_DOOR_FRONT_RIGHT) } &#xA;(L:TOGGLE_DOOR_MIDDLE_LEFT) 0 == if{ 1 (&gt;L:TOGGLE_DOOR_MIDDLE_LEFT) } &#xA;(L:TOGGLE_DOOR_MIDDLE_RIGHT) 0 == if{ 1 (&gt;L:TOGGLE_DOOR_MIDDLE_RIGHT) }" presetId="c52a2aa2-a73a-4096-b67f-1b92f1e6cdd8" />
           <onRelease type="MSFS2020CustomInputAction" command="(L:TOGGLE_DOOR_FRONT_LEFT) 1 == if{ 0 (&gt;L:TOGGLE_DOOR_FRONT_LEFT) } &#xA;(L:TOGGLE_DOOR_FRONT_RIGHT) 1 == if{ 0 (&gt;L:TOGGLE_DOOR_FRONT_RIGHT) } (L:TOGGLE_DOOR_MIDDLE_LEFT) 1 == if{ 0 (&gt;L:TOGGLE_DOOR_MIDDLE_LEFT) } &#xA;(L:TOGGLE_DOOR_MIDDLE_RIGHT) 1 == if{ 0 (&gt;L:TOGGLE_DOOR_MIDDLE_RIGHT) }" presetId="0" />
@@ -537,7 +585,7 @@
     <config guid="f0ddb8f0-17dc-40f0-803e-06c34b792441">
       <active>true</active>
       <description>H135 Eng Master 1 FLIGHT/IDLE</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 7" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 7" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(L:Engine1_Up, bool) ! (&gt;L:Engine1_Up, bool)" presetId="f111946f-9477-4090-ae52-8b016fc0f117" />
           <onRelease type="MSFS2020CustomInputAction" command="(L:Engine1_Down, bool) ! (&gt;L:Engine1_Down, bool) " presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
@@ -549,9 +597,9 @@
     <config guid="e708d6bb-a182-4006-baea-2191d3473bf7">
       <active>true</active>
       <description>H135 Eng Master 2 FLIGHT/IDLE</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 10" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 10" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="(L:Engine2_Up, bool) ! (&gt;L:Engine2_Up, bool)" presetId="f111946f-9477-4090-ae52-8b016fc0f117" />
+          <onPress type="MSFS2020CustomInputAction" command="(L:Engine2_Up, bool) ! (&gt;L:Engine2_Up, bool)" presetId="d91a7748-89ad-4545-a3a3-a9289270c34d" />
           <onRelease type="MSFS2020CustomInputAction" command="(L:Engine2_Down, bool) ! (&gt;L:Engine2_Down, bool)" presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
         </button>
         <preconditions />
@@ -561,7 +609,7 @@
     <config guid="c86e66b8-5300-408b-8ecb-67ce6ac1eefc">
       <active>true</active>
       <description>H135 Eng Master 1 IDLE/OFF</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 8" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 8" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(L:Engine1_Down, bool) ! (&gt;L:Engine1_Down, bool) 0 (&gt;L:Engine1_Up, bool)" presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
           <onRelease type="MSFS2020CustomInputAction" command="(L:Engine1_Up, bool) ! (&gt;L:Engine1_Up, bool) 0 (&gt;L:Engine1_Down, bool)" presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
@@ -573,7 +621,7 @@
     <config guid="143b64f6-52d8-48d7-887c-40604f92be1e">
       <active>true</active>
       <description>H135 Eng Master 2 IDLE/OFF</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 9" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 9" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(L:Engine2_Down, bool) ! (&gt;L:Engine2_Down, bool) 0 (&gt;L:Engine2_Up, bool)" presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
           <onRelease type="MSFS2020CustomInputAction" command="(L:Engine2_Up, bool) ! (&gt;L:Engine2_Up, bool) 0 (&gt;L:Engine2_Down, bool)" presetId="7b3ff931-c508-44b2-b171-8f0f2a04845b" />
@@ -585,10 +633,10 @@
     <config guid="31b63dc2-18f0-4cf8-923c-af6847d5e4f1">
       <active>true</active>
       <description>H135 Gen 1</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 32" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="MF Mega Overhead/ SN-4F6-017" name="Button 28" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(A:GENERAL ENG MASTER ALTERNATOR:1,bool) 0 == if{ (&gt;K:TOGGLE_ALTERNATOR1) } " presetId="502512df-3902-4530-bc9d-3530b696e5f9" />
-          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="(A:GENERAL ENG MASTER ALTERNATOR:1,bool) 1 == if{ (&gt;K:TOGGLE_ALTERNATOR1) } " presetId="-" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="(A:GENERAL ENG MASTER ALTERNATOR:1,bool) 1 == if{ (&gt;K:TOGGLE_ALTERNATOR1) } " presetId="0" />
         </button>
         <preconditions />
         <configrefs />
@@ -597,7 +645,7 @@
     <config guid="08475c2a-82e4-4fdf-a3ca-e4bb18f317de">
       <active>true</active>
       <description>H135 Gen 2</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800b-444553540000" name="Button 2" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="MF Mega Overhead/ SN-4F6-017" name="Button 29" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(A:GENERAL ENG MASTER ALTERNATOR:2,bool) 0 == if{ (&gt;K:TOGGLE_ALTERNATOR2) } " presetId="502512df-3902-4530-bc9d-3530b696e5f9" />
           <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="(A:GENERAL ENG MASTER ALTERNATOR:2,bool) 1 == if{ (&gt;K:TOGGLE_ALTERNATOR2) } " presetId="0" />
@@ -609,7 +657,7 @@
     <config guid="ddcf24a9-99e7-42b5-91be-8337c2bee64b">
       <active>true</active>
       <description>H135 Lights Ext Landing </description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 11" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 11" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="1 (&gt;K:LANDING_LIGHTS_SET)" presetId="f35d79de-a574-4a2a-8a99-885645b2b08e" />
           <onRelease type="MSFS2020CustomInputAction" command="0 (&gt;K:LANDING_LIGHTS_SET)" presetId="f35d79de-a574-4a2a-8a99-885645b2b08e" />
@@ -621,7 +669,7 @@
     <config guid="e02d0c0b-e4e6-4269-9d95-8fee7e7f250d">
       <active>true</active>
       <description>H135 Lights Ext Nav</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 5" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 5" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="1 (&gt;K:NAV_LIGHTS_ON)" presetId="c6a48566-777c-42fc-a30d-fc0e26c5d9c0" />
           <onRelease type="MSFS2020CustomInputAction" command="1 (&gt;K:NAV_LIGHTS_OFF)" presetId="be57d749-d5dc-45ad-a17e-efa4194096df" />
@@ -633,7 +681,7 @@
     <config guid="ee5652ff-53b0-43d3-9b32-a36d157571a7">
       <active>true</active>
       <description>H135 Lights Ext Beacon</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="1 (&gt;K:BEACON_LIGHTS_ON)" presetId="2639f115-93a5-404f-9f24-ec1999343451" />
           <onRelease type="MSFS2020CustomInputAction" command="0 (&gt;K:BEACON_LIGHTS_ON)" presetId="2639f115-93a5-404f-9f24-ec1999343451" />
@@ -645,7 +693,7 @@
     <config guid="cd3cc957-6324-4548-9231-bcb0436185c2">
       <active>false</active>
       <description>h135 Collective</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="BU0836 Interface / JS-41cdad70-317f-11ee-800d-444553540000" name="Axis Y" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="BU0836A 1 / JS-d63ffa30-df0d-11ee-8002-444553540000" name="Axis Y" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <analog>
           <onChange type="MSFS2020CustomInputAction" command="@ 64.056 * 0 max 64056 min (&gt;K:THROTTLE1_SET)" presetId="ce277763-24ec-4cf5-bff1-09b412f3a565" />
         </analog>
@@ -656,7 +704,7 @@
     <config guid="01942e3c-4fca-4c1a-8db9-09eaee1618e4">
       <active>false</active>
       <description>ry</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="BU0836 Interface / JS-41cdad70-317f-11ee-800d-444553540000" name="Axis RotationY" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="BU0836A 1 / JS-d63ffa30-df0d-11ee-8002-444553540000" name="Axis RotationY" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <analog>
           <onChange />
         </analog>
@@ -667,7 +715,7 @@
     <config guid="2f235b53-b7fa-4fed-94da-98b8a4e9181f">
       <active>false</active>
       <description>rz</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="BU0836 Interface / JS-41cdad70-317f-11ee-800d-444553540000" name="Axis RotationZ" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="BU0836A 1 / JS-d63ffa30-df0d-11ee-8002-444553540000" name="Axis RotationZ" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <analog>
           <onChange />
         </analog>
@@ -680,7 +728,7 @@
     <config guid="98580865-3efd-4731-b674-e7f0a468e7de">
       <active>false</active>
       <description>h135 Collective - Throttle 1</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="BU0836 Interface / JS-41cdad70-317f-11ee-800d-444553540000" name="Axis X" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="BU0836A 1 / JS-d63ffa30-df0d-11ee-8002-444553540000" name="Axis X" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <analog>
           <onChange type="MSFS2020CustomInputAction" command="@ 16.0147 * 0 max 16383 min (&gt;K:THROTTLE1_SET)" presetId="ce277763-24ec-4cf5-bff1-09b412f3a565" />
         </analog>
@@ -691,7 +739,7 @@
     <config guid="02be1b0d-3809-41fb-ba18-6de7df929694">
       <active>true</active>
       <description>G1000 COM1 Freq outer DEC</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="BU0836 Interface / JS-41cdd480-317f-11ee-800f-444553540000" name="Button 19" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="BU0836A 2 / JS-3700f590-df0e-11ee-8003-444553540000" name="Button 19" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:COM_RADIO_WHOLE_DEC)" presetId="ec154767-41ce-4a2f-865b-3e6fe7c90c89" />
         </button>
@@ -702,7 +750,7 @@
     <config guid="54341b5b-5c61-4a48-abe8-36d4a5982e1f">
       <active>true</active>
       <description>G1000 COM1 Freq inner DEC</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="BU0836 Interface / JS-41cdd480-317f-11ee-800f-444553540000" name="Button 17" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="BU0836A 2 / JS-3700f590-df0e-11ee-8003-444553540000" name="Button 17" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:COM_RADIO_FRACT_DEC_CARRY)" presetId="427f596b-b72c-4c61-bd33-f4920cef557e" />
         </button>
@@ -713,7 +761,7 @@
     <config guid="3fdabdf3-495f-40b5-a467-573c13b9667f">
       <active>true</active>
       <description>G1000 COM1 Freq outer INC</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="BU0836 Interface / JS-41cdd480-317f-11ee-800f-444553540000" name="Button 20" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="BU0836A 2 / JS-3700f590-df0e-11ee-8003-444553540000" name="Button 20" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:COM_RADIO_WHOLE_INC)" presetId="e1a79c8b-2e4a-49b2-9284-d1cf0adc5707" />
         </button>
@@ -724,7 +772,7 @@
     <config guid="ae62248e-ac07-43d5-abdc-cd1ecf434cfd">
       <active>true</active>
       <description>G1000 COM1 Freq inner INC</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="BU0836 Interface / JS-41cdd480-317f-11ee-800f-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="BU0836A 2 / JS-3700f590-df0e-11ee-8003-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:COM_RADIO_FRACT_INC_CARRY)" presetId="efcf8ab7-14f6-47fa-9a71-2bf6f2502717" />
         </button>
@@ -735,9 +783,21 @@
     <config guid="8ec07d7c-a821-4e03-b1cf-6c3ac1ecc26f">
       <active>true</active>
       <description>G1000 COM1 SWAP</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.0.2.0, Culture=neutral, PublicKeyToken=null" serial="BU0836 Interface / JS-41cdd480-317f-11ee-800f-444553540000" name="Button 20" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="BU0836A 2 / JS-3700f590-df0e-11ee-8003-444553540000" name="Button 20" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:COM_RADIO_WHOLE_INC)" presetId="e1a79c8b-2e4a-49b2-9284-d1cf0adc5707" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="e671d241-30ca-4d4a-9aa6-a0b69509de9b">
+      <active>true</active>
+      <description>H135 Avionics</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.1.0, Culture=neutral, PublicKeyToken=null" serial="Fuel+Elec / JS-41cdad70-317f-11ee-800a-444553540000" name="Button 27" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;K:AVIONICS_MASTER_1_SET)&#xA;1 (&gt;K:AVIONICS_MASTER_2_SET)" presetId="fc1cc0cd-126d-4090-bc6c-f32a42b5da2e" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="0 (&gt;K:AVIONICS_MASTER_1_SET)&#xA;0 (&gt;K:AVIONICS_MASTER_2_SET)" presetId="fc1cc0cd-126d-4090-bc6c-f32a42b5da2e" />
         </button>
         <preconditions />
         <configrefs />

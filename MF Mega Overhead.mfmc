@@ -29,8 +29,6 @@
   <Output Name="25" Pin="25" />
   <Output Name="26" Pin="26" />
   <Output Name="27" Pin="27" />
-  <Output Name="28" Pin="28" />
-  <Output Name="29" Pin="29" />
   <Output Name="30" Pin="30" />
   <Output Name="31" Pin="31" />
   <Output Name="32" Pin="32" />
@@ -71,4 +69,6 @@
   <Output Name="67" Pin="67" />
   <Output Name="68" Pin="68" />
   <Output Name="69" Pin="69" />
+  <Button Name="Button 28" Pin="28" />
+  <Button Name="Button 29" Pin="29" />
 </Config>
